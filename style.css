@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poetsen+One&display=swap');
+
+body {
+    background-color: #000000;
+}
+
+h1 {
+    font-family: "Montserrat", sans-serif;
+    color: #DAA520;
+    text-align: center;
+}
+
+label {
+    font-family: "Montserrat", sans-serif;
+    color: #000000;
+    font-weight: 600;
+    padding: 20px;
+}
+
+button {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    padding: 15px;
+    background-color: #DAA520;
+    color: #000000;
+    border: none;
+    border-radius: 20px;
+}
+
+.link-lista {
+    font-family: "Montserrat", sans-serif;
+    color: #DAA520;
+    text-decoration: none;
+}
+
+.container-link,
+.container-button,
+.container-form {
+    text-align: center;
+}
+
+.logotipo-art-martins {
+    width: 200px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.section-cadastro {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 20px;
+    width: 30%;
+    margin: 0 auto;
+}
+
+footer {
+    font-family: "Montserrat", sans-serif;
+    color: #ffffff;
+}
+
+.container-rodape {
+    text-align: center;
+    margin-top: 120px;
+}
+
+/* Media queries para telas menores */
+
+@media only screen and (max-width: 768px) {
+    .section-cadastro {
+        width: 60%;
+        /* Reduz a largura do formulário para telas menores */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .section-cadastro {
+        width: 80%;
+        /* Reduz ainda mais a largura do formulário para telas muito pequenas */
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    .section-cadastro input[type="text"],
+    .section-cadastro input[type="date"] {
+        width: 50%;
+        /* Define a largura total para as caixas de texto em telas menores */
+    }
+}
