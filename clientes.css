@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poetsen+One&display=swap');
+
+body {
+    background-color: #000000;
+}
+
+h1 {
+    font-family: "Montserrat", sans-serif;
+    color: #DAA520;
+}
+
+p {
+    font-family: "Montserrat", sans-serif;
+    color: #ffffff;
+}
+
+table, thead {
+    color: white;
+}
+
+.link-editar-cliente, .link-deletar-cliente {
+    font-family: "Montserrat", sans-serif;
+    color: #DAA520;
+    text-decoration: none;
+}

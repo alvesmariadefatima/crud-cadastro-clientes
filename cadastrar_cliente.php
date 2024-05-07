@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ART Martins Consultoria & Marketing | Cadastro de Clientes</title>
     <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./cadastrar_cliente.css">
 </head>
+
 <body>
     <form class="container-form" action="cadastro.php" method="POST">
         <div>
             <a href="https://artmartins.com.br/" target="_blank"><img class="logotipo-art-martins" src="./assets/logotipo-art-martins.png" alt="Logotipo ART Martins"></a>
+        </div>
+
+        <div class="container-link">
+            <a class="link-lista" href="clientes.php">Voltar para a lista</a>
         </div>
 
         <h1>Formulário de Cadastro de Clientes</h1>
@@ -33,9 +39,6 @@
             </div>
         </section>
         <br><br>
-        <div class="container-link">
-            <a class="link-lista" href="">Voltar para a lista</a>
-        </div>
     </form>
 
     <div class="container-rodape">
@@ -46,19 +49,20 @@
 
     <script>
         function validarDados(event) {
-                // Obtenha os valores dos campos do formulário
-                var nome = document.getElementsByName("nome")[0].value;
-                var telefone = document.getElementsByName("telefone")[0].value;
-                var email = document.getElementsByName("email")[0].value;
-                var dataNascimento = document.getElementsByName("data_nascimento")[0].value;
+            // Obtenha os valores dos campos do formulário
+            var nome = document.getElementsByName("nome")[0].value;
+            var telefone = document.getElementsByName("telefone")[0].value;
+            var email = document.getElementsByName("email")[0].value;
+            var dataNascimento = document.getElementsByName("data_nascimento")[0].value;
 
-                // Verifique se algum campo está vazio
-                if (nome === "" || telefone === "" || email === "" || dataNascimento === "") {
-                    // Se algum campo estiver vazio, exiba uma mensagem de alerta
-                    alert("Por favor, preencha todos os campos do formulário.");
-                    event.preventDefault(); // Impede o envio do formulário
-                }
+            // Verifique se algum campo está vazio
+            if (nome === "" || telefone === "" || email === "" || dataNascimento === "") {
+                // Se algum campo estiver vazio, exiba uma mensagem de alerta
+                alert("Por favor, preencha todos os campos do formulário.");
+                event.preventDefault(); // Impede o envio do formulário
             }
+        }
     </script>
 </body>
+
 </html>

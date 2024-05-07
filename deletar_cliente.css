@@ -1,0 +1,33 @@
+body {
+    background-color: #000000;
+}
+
+h1 {
+    font-family: "Montserrat", sans-serif;
+    color: #DAA520;
+    text-align: center;
+}
+
+a, button {
+    font-family: "Montserrat", sans-serif;
+    background-color: #DAA520;
+    font-weight: 600;
+    color: #000000;
+    text-decoration: none;
+    padding: 9px;
+    border-radius: 20px;
+}
+
+.container-form {
+    text-align: center;
+}
+
+.logotipo-art-martins {
+    width: 200px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.container-logotipo {
+    text-align: center;
+}
