@@ -1,4 +1,14 @@
 <?php
+
+if(!isset($_SESSION)) {
+    session_start();
+}
+
+if(!isset($_SESSION['admin']) || !$_SESSION['admin']) {
+    header("Location: clientes.php");
+    die();
+}
+
 if (isset($_POST['confirmar'])) {
     include('conexao.php');
     $id = intval($_GET['id']);

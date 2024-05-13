@@ -1,4 +1,13 @@
 <?php
+if(!isset($_SESSION)) {
+    session_start();
+}
+
+if(!isset($_SESSION['admin']) || !$_SESSION['admin']) {
+    header("Location: clientes.php");
+    die();
+}
+
 include('conexao.php');
 
 // Verifica se o formulário foi submetido
@@ -9,6 +18,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $telefone = $_POST['telefone'];
     $email = $_POST['email'];
     $data_nascimento = $_POST['data_nascimento'];
+    $senha = $_POST['senha'];
+    $alterar_senha = false;
+    $sql_code_extra = "";
+    $admin = $_POST['admin'];
+
+    if($alterar_senha) {
+        $sql_code_extra = "senha = '$senha_criptografada',";
+    }
+
+    if(!empty($senha)) {
+        if(strlen($senha_descriptografada) < 6 || strlen($senha) > 16) {
+            echo "A senha deve ter entre 6 e 16 caracteres";
+        } else {
+            $senha_criptografada = password_hash($senha, PASSWORD_DEFAULT);
+            $sql_code_extra = "senha = '$senha_criptografada',";
+        }
+    }
 
     // Atualiza os dados do cliente no banco de dados
     $sql_update = "UPDATE clientes SET nome='$nome', telefone='$telefone', email='$email', data_nascimento='$data_nascimento' WHERE id='$id'";
@@ -58,15 +84,24 @@ $cliente = $query_cliente->fetch_assoc();
             <label for="">E-mail: </label>
             <input value="<?php echo $cliente['email']; ?>" type="text" name="email">
             <br><br>
+            <label for="">Senha: </label>
+            <input value="" type="password" name="senha">
+            <br><br>
             <label for="">Data de Nascimento: </label>
             <input value="<?php echo $cliente['data_nascimento']; ?>" type="date" name="data_nascimento">
             <br><br>
+
+            <p>
+                <label>Tipo: </label>
+                <input type="radio" value="1" name="admin">Admin
+                <input type="radio" value="0" name="admin">Cliente
+            </p>
 
             <!-- Adicionando campo oculto para enviar o ID do cliente -->
             <input type="hidden" name="id" value="<?php echo $id; ?>">
 
             <div class="container-button">
-                <button type="submit">Salvar Alterações</button>
+                <button type="submit">Salvar Cliente</button>
             </div>
         </section>
         <br><br>

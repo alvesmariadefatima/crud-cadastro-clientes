@@ -18,7 +18,7 @@ table, thead {
     color: white;
 }
 
-.link-editar-cliente, .link-deletar-cliente {
+.link-editar-cliente, .link-deletar-cliente, .link-cadastrar-cliente {
     font-family: "Montserrat", sans-serif;
     color: #DAA520;
     text-decoration: none;
