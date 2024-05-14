@@ -36,11 +36,6 @@
             <br><br><label for="">Senha: </label>
             <input type="password" name="senha">
             <br><br>
-            <p>
-                <label>Tipo: </label>
-                <input type="radio" value="1" name="admin">Admin
-                <input type="radio" value="0" name="admin">Cliente
-            </p>
 
             <div class="container-button">
                 <button onclick="validarDados(event)">Cadastrar</button>

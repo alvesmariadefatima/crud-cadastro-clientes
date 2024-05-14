@@ -1,7 +1,7 @@
 <?php
 $servidor = "localhost";
-$usuario = "root";
-$senha = "";
+$usuario = "programador";
+$senha = "senha";
 $dbname = "crud_clientes";
 
 $conexao = mysqli_connect($servidor, $usuario, $senha, $dbname);

@@ -1,12 +1,4 @@
 <?php
-if(!isset($_SESSION)) {
-    session_start();
-}
-
-if(!isset($_SESSION['admin']) || !$_SESSION['admin']) {
-    header("Location: clientes.php");
-    die();
-}
 
 include('lib/conexao.php');
 include('lib/mail.php');
@@ -16,9 +8,8 @@ $telefone = $_POST['telefone'];
 $email = $_POST['email'];
 $data_nascimento = $_POST['data_nascimento'];
 $senha_descriptografada = $_POST['senha'];
-$admin = $_POST['admin'];
 
-if(strlen($senha_descriptografada) < 6 || strlen($senha_descriptografada) > 16) {
+if (strlen($senha_descriptografada) < 6 || strlen($senha_descriptografada) > 16) {
     echo "A senha deve ter entre 6 e 16 caracteres";
 } else {
 
@@ -26,8 +17,8 @@ if(strlen($senha_descriptografada) < 6 || strlen($senha_descriptografada) > 16) 
     $senha = password_hash($senha_descriptografada, PASSWORD_DEFAULT);
 
     // Inserir dados no banco de dados
-    if($path) {
-        $sql = "INSERT INTO clientes(nome, telefone, email, senha, data_nascimento, admin) 
+    if ($path) {
+        $sql = "INSERT INTO clientes(nome, telefone, email, senha, data_nascimento, path, admin) 
                 VALUES ('$nome', '$telefone', '$email', '$senha', '$data_nascimento', '$path', '$admin')";
     } else {
         $sql = "INSERT INTO clientes(nome, telefone, email, senha, data_nascimento) 
@@ -54,4 +45,3 @@ if(strlen($senha_descriptografada) < 6 || strlen($senha_descriptografada) > 16) 
 }
 
 mysqli_close($conexao);
-?>
