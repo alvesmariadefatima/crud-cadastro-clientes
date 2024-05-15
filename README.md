@@ -1,13 +1,6 @@
-# Formulário para Cadastro de Clientes - CRUD
+# Formulário para Cadastro de Clientes da Digital Hurus- CRUD
 
-Este é um projeto de um formulário de cadastro para clientes, com operações básicas de CRUD (Create, Read, Update, Delete). Desenvolvido utilizando HTML, CSS e JavaScript no Frontend, PHP e MariaDB no backend.
-
-# Funcionalidades:
-
-- **Cadastro**: Adicione novos clientes inserindo suas informações básicas.
-- **Consulta**: Visualize todos os clientes cadastrados em uma lista.
-- **Atualização**: Edite as informações de clientes existentes conforme necessário.
-- **Exclusão**: Remova clientes da base de dados com facilidade.
+Este é um projeto de um formulário de cadastro para clientes da Digital Hurus, com operações básicas de CRUD (Create, Read, Update, Delete). Desenvolvido utilizando HTML, CSS e JavaScript no Frontend, PHP e MariaDB no backend.
 
 # Tecnologias Utilizadas:
 
@@ -17,18 +10,13 @@ Este é um projeto de um formulário de cadastro para clientes, com operações 
 
 # 🌐 Tela de cadastro dos clientes
 
-<img src="./assets/foto_cadastro_cliente.png" alt="Tela de Cadastro dos Clientes">
+<img src="./assets/tela-cadastro-cliente-digital-hurus-pt1.png" alt="Tela de Cadastro dos Clientes">
+<br><br>
+<img src="./assets/tela-cadastro-cliente-digital-hurus-pt2.png" alt="Tela de Cadastro dos Clientes">
 
-# 🔎 Tela para visualizar a lista de clientes cadastrados
+# ✅ Tela de cadastro efetuado com sucesso
 
-<img src="./assets/foto_lista_clientes_cadastrados.png" alt="Tela para visualizar">
+<img src="./assets/tela-cadastro-efetuado-sucesso.png" alt="Tela de Cadastro Efetuado com Sucesso">
 
-# ➡️ Tela para editar os dados do cliente
-
-<img src="./assets/foto_editar_cliente.png" alt="Tela para editar os dados do clinete">
-
-# ⚠️ Tela de aviso para deletar o cliente do sistema
-
-<img src="./assets/foto_deletar_cliente.png" alt="Tela de aviso para deletar os dados do cliente">
 <hr>
 <p align="center">2024 - Maria de Fátima Nunes Alves</p>
